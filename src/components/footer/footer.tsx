@@ -1,3 +1,5 @@
+import "./footer.css";
+
 const Footer = () => {
   return <p className="footer">
     Made by <a href="https://github.com/Summonair/">@Summonair</a>,

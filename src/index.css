@@ -7,22 +7,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 a {
   color: #337ab7;
   text-decoration: none;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 
-.bmc-btn-container{
+.bmc-btn-container {
   position: absolute;
   width: fit-content;
   bottom: 0px;
   left: 0px;
-  padding: 10px;
+  padding: 2.5rem 1rem;
+}
+
+@media all and (max-width:680px) {
+
+  .bmc-btn-container {
+    display: fixed;
+    transform: translate(calc(50vw - 50%));
+  }
 }
