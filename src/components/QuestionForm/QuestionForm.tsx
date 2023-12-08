@@ -43,14 +43,15 @@ const QuestionForm: React.FC<{ questions: Question[] }> = ({ questions }) => {
 
     return <div className={`container ${isAnswered ? (isCorrect ? 'correct' : 'incorrect') : ''}`}>
         <span>Is this a cyber company or a hair product?</span>
-        <span className="title">{question?.name}</span>
+        <span className="title">{!isQuizEnded ? question?.name : 'Quiz has ended!'}</span>
         {isAnswered ?
             <div className='answerSection'>
-                <span>{question?.description}</span>
+                <img className="img" src={`images/${question?.img}`} />
+                <span className="description">{question?.description}</span>
                 <button className="answerButton" onClick={() => handleNextQuestion()}>Next</button>
             </div>
             :
-            isQuizEnded ? <span>Quiz has ended!</span> :
+            isQuizEnded ? <></> :
                 <div className='buttonsContainer'>
                     <button className='answerButton' onClick={() => handleAnswer(QuestionTypeEnum.HairProduct)}>Hair Product</button>
                     <button className='answerButton' onClick={() => handleAnswer(QuestionTypeEnum.CyberCompany)}>Cyber Company</button>
