@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cybercompanyorhairproduct/static/css/main.96e3c481.css",
+    "main.js": "/cybercompanyorhairproduct/static/js/main.73b88269.js",
+    "index.html": "/cybercompanyorhairproduct/index.html",
+    "main.96e3c481.css.map": "/cybercompanyorhairproduct/static/css/main.96e3c481.css.map",
+    "main.73b88269.js.map": "/cybercompanyorhairproduct/static/js/main.73b88269.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96e3c481.css",
+    "static/js/main.73b88269.js"
+  ]
+}
