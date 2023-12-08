@@ -1,0 +1,8 @@
+{
+  "short_name": "cybercompanyorhairproduct",
+  "name": "cyber company or hair product?",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
