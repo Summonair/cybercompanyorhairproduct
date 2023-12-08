@@ -7,6 +7,7 @@ const QuestionForm: React.FC<{ questions: Question[] }> = ({ questions }) => {
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
     const [question, setQuestion] = useState<Question | null>(null);
     const [questionsList, setQuestionsList] = useState<Question[]>([...questions]);
+    const [isQuizEnded, setIsQuizEnded] = useState(false);
 
 
     const handleAnswer = (buttonType: QuestionTypeEnum): void => {
@@ -15,10 +16,16 @@ const QuestionForm: React.FC<{ questions: Question[] }> = ({ questions }) => {
     }
     const handleNextQuestion = () => {
         setIsAnswered(() => false);
-        const question = getRandom(questionsList);
-        setQuestion(question);
-        setQuestionsList((prevQuestions) =>
-            prevQuestions.filter((item) => item.name !== question.name));
+        if (questionsList.length >= 1) {
+
+            const question = getRandom(questionsList);
+            setQuestion(question);
+            setQuestionsList((prevQuestions) =>
+                prevQuestions.filter((item) => item.name !== question.name));
+        } else {
+            setIsQuizEnded(true);
+            console.log('quiz ended!')
+        }
     }
 
     useEffect(() => {
@@ -43,10 +50,11 @@ const QuestionForm: React.FC<{ questions: Question[] }> = ({ questions }) => {
                 <button className="answerButton" onClick={() => handleNextQuestion()}>Next</button>
             </div>
             :
-            <div className='buttonsContainer'>
-                <button className='answerButton' onClick={() => handleAnswer(QuestionTypeEnum.HairProduct)}>Hair Product</button>
-                <button className='answerButton' onClick={() => handleAnswer(QuestionTypeEnum.CyberCompany)}>Cyber Company</button>
-            </div>}
+            isQuizEnded ? <span>Quiz has ended!</span> :
+                <div className='buttonsContainer'>
+                    <button className='answerButton' onClick={() => handleAnswer(QuestionTypeEnum.HairProduct)}>Hair Product</button>
+                    <button className='answerButton' onClick={() => handleAnswer(QuestionTypeEnum.CyberCompany)}>Cyber Company</button>
+                </div>}
     </div>
 };
 
