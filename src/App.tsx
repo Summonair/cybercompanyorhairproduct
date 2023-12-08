@@ -1,19 +1,22 @@
-import React from "react";
+import React from 'react';
 import "./App.css";
-import questions from "./questions/questions";
-const getRandom = (array: any) => {
-  return array[Math.floor(Math.random() * array.length)];
-};
+import Footer from './components/footer/footer';
+import QuestionForm from './components/QuestionForm/QuestionForm';
+import questions from './questions/questions';
+
+
 
 function App() {
-  const filteredQuestions = [...questions];
-  const question = getRandom(filteredQuestions);
-  filteredQuestions.filter((item) => item.name != question.name);
+
+
   return (
     <div className="App">
-      <div>{question.name}</div>
+      <QuestionForm questions={questions}></QuestionForm>
+      <Footer></Footer>
     </div>
   );
 }
+
+
 
 export default App;
