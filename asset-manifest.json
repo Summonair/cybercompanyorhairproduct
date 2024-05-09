@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cybercompanyorhairproduct/static/css/main.410aed35.css",
-    "main.js": "/cybercompanyorhairproduct/static/js/main.73b88269.js",
+    "main.css": "/cybercompanyorhairproduct/static/css/main.825209e6.css",
+    "main.js": "/cybercompanyorhairproduct/static/js/main.e9ca137c.js",
     "index.html": "/cybercompanyorhairproduct/index.html",
-    "main.410aed35.css.map": "/cybercompanyorhairproduct/static/css/main.410aed35.css.map",
-    "main.73b88269.js.map": "/cybercompanyorhairproduct/static/js/main.73b88269.js.map"
+    "main.825209e6.css.map": "/cybercompanyorhairproduct/static/css/main.825209e6.css.map",
+    "main.e9ca137c.js.map": "/cybercompanyorhairproduct/static/js/main.e9ca137c.js.map"
   },
   "entrypoints": [
-    "static/css/main.410aed35.css",
-    "static/js/main.73b88269.js"
+    "static/css/main.825209e6.css",
+    "static/js/main.e9ca137c.js"
   ]
 }
