@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Question, QuestionTypeEnum } from "../../questions/questions";
 import "./QuestionForm.css"
+import QuizEnded from "./QuizEnded";
 
 const QuestionForm: React.FC<{ questions: Question[] }> = ({ questions }) => {
     const [isAnswered, setIsAnswered] = useState(false);
@@ -8,11 +9,15 @@ const QuestionForm: React.FC<{ questions: Question[] }> = ({ questions }) => {
     const [question, setQuestion] = useState<Question | null>(null);
     const [questionsList, setQuestionsList] = useState<Question[]>([...questions]);
     const [isQuizEnded, setIsQuizEnded] = useState(false);
+    const [totalCorrect, setTotalCorrect] = useState(0);
 
 
-    const handleAnswer = (buttonType: QuestionTypeEnum): void => {
-        setIsCorrect(buttonType === question?.type);
+    const handleAnswer = (answer: QuestionTypeEnum): void => {
+        const isAnswerCorrect = answer === question?.type;
+        setIsCorrect(isAnswerCorrect);
         setIsAnswered(prev => !prev);
+        if (isAnswerCorrect)
+            setTotalCorrect(prevCorrect => prevCorrect + 1);
     }
     const handleNextQuestion = () => {
         setIsAnswered(() => false);
@@ -43,7 +48,7 @@ const QuestionForm: React.FC<{ questions: Question[] }> = ({ questions }) => {
 
     return <div className={`container ${isAnswered ? (isCorrect ? 'correct' : 'incorrect') : ''}`}>
         <span>Is this a cyber company or a hair product?</span>
-        <span className="title">{!isQuizEnded ? question?.name : 'Quiz has ended!'}</span>
+        <span className="title">{!isQuizEnded ? question?.name : <QuizEnded correct={totalCorrect} total={questions.length}></QuizEnded>}</span>
         {isAnswered ?
             <div className='answerSection'>
                 <img className="img" src={`images/${question?.img}`} />
