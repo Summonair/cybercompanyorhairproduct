@@ -16,10 +16,8 @@ a {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
 
 .bmc-btn-container {
   position: absolute;
@@ -29,8 +27,7 @@ code {
   padding: 2.5rem 1rem;
 }
 
-@media all and (max-width:680px) {
-
+@media all and (max-width: 680px) {
   .bmc-btn-container {
     display: fixed;
     transform: translate(calc(50vw - 50%));

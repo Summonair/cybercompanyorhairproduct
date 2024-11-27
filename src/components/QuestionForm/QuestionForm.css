@@ -1,63 +1,61 @@
 .answerSection {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    align-self: center;
-    height: 200px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-self: center;
+  height: 200px;
+  align-items: center;
 }
 
 .answerButton {
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    background-color: #4299e1;
-    border-radius: 4px;
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    width: 160px;
-    height: 50px;
-    z-index: 10;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  width: 160px;
+  height: 50px;
+  z-index: 10;
 }
-.img{
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
-
+.img {
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.description{
-    display: inline-block;
-    max-width: 80%;
-    word-wrap: break-word;
+.description {
+  display: inline-block;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 .title {
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .buttonsContainer {
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-evenly;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .correct {
-    background-color: #dff0d8;
-
+  background-color: #dff0d8;
 }
 
 .incorrect {
-    background-color: #f2dede;
+  background-color: #f2dede;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
 }

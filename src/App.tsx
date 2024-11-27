@@ -1,14 +1,9 @@
-import React from 'react';
 import "./App.css";
-import Footer from './components/footer/footer';
-import QuestionForm from './components/QuestionForm/QuestionForm';
-import questions from './questions/questions';
-
-
+import Footer from "./components/footer/footer";
+import QuestionForm from "./components/QuestionForm/QuestionForm";
+import questions from "./questions/questions";
 
 function App() {
-
-
   return (
     <div className="App">
       <QuestionForm questions={questions}></QuestionForm>
@@ -16,7 +11,5 @@ function App() {
     </div>
   );
 }
-
-
 
 export default App;
